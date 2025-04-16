@@ -25,7 +25,8 @@ class PaygateService
       AMOUNT: order.amount.to_i,
       CURRENCY: 'ZAR',
       RETURN_URL: Rails.application.routes.url_helpers.payment_return_url,
-      TRANSACTION_DATE: order.created_at.to_s,
+      # TRANSACTION_DATE: order.created_at.to_s,
+      TRANSACTION_DATE: "2025-04-16 05:18:32",
       LOCALE: "en-za",
       COUNTRY: "ZAF",
       EMAIL: order.user.email
