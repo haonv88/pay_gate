@@ -1,0 +1,21 @@
+<h1>Webhook Logs (PayGate)</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Thời gian</th>
+      <th>Nội dung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @logs.each do |log| %>
+      <tr>
+        <td><%= log.created_at.strftime("%Y-%m-%d %H:%M:%S") %></td>
+        <td>
+          <pre><%= JSON.pretty_generate(log.payload) %></pre>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
